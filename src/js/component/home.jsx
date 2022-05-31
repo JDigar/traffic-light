@@ -7,7 +7,7 @@ const Home = () => {
 
 	return (
 		<>
-			<div className="text-center p-4 traffic">
+			<div className="p-4 traffic">
 				<div
 					onClick={() => setSelectedColor("green")}
 					className={
