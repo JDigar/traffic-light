@@ -1,45 +1,32 @@
 // import { useState } from "react/cjs/react.production.min";
-import { useState } from "react";
-
-// const [color, setColor] = useState("btn-success");
-//
-
-// function iluminar() {}
+import React, { useState } from "react";
 
 //create your first component
 const Home = () => {
-	const [color, setColor] = useState(false);
+	const [selectedColor, setSelectedColor] = useState("red");
 
 	return (
 		<>
-			<div className="container text-center">
-				<div>
-					<button
-						type="button"
-						className={
-							"btn btn-success rounded-circle" +
-							(color === true ? "iluminado" : " ")
-						}
-						onClick={() => setColor(false)}></button>
-				</div>
-				<div>
-					<button
-						type="button"
-						class={
-							"btn btn-success rounded-circle" +
-							(color === true ? "iluminado" : " ")
-						}
-						onClick={() => setColor(false)}></button>
-				</div>
-				<div>
-					<button
-						type="button"
-						class={
-							"btn btn-success rounded-circle" +
-							(color === true ? "iluminado" : " ")
-						}
-						onClick={() => setColor(false)}></button>
-				</div>
+			<div className="text-center p-4 traffic">
+				<div
+					onClick={() => setSelectedColor("green")}
+					className={
+						"light green" +
+						(selectedColor === "green" ? " glow" : " ")
+					}></div>
+
+				<div
+					onClick={() => setSelectedColor("yellow")}
+					className={
+						"light yellow" +
+						(selectedColor === "yellow" ? " glow" : " ")
+					}></div>
+
+				<div
+					onClick={() => setSelectedColor("red")}
+					className={
+						"light red" + (selectedColor === "red" ? " glow" : " ")
+					}></div>
 			</div>
 		</>
 	);
